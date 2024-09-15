@@ -166,12 +166,17 @@ def chat():
         # Process input
         prediction_input = preprocess_input(user_input)
 
+        # Prediksi
         output = model.predict(prediction_input)
         output = output.argmax()
 
+        # Ambil tag respons dan pilih respons acak
         response_tag = le.inverse_transform([output])[0]
-        response = random.choice(responses[response_tag])
-        
+        if response_tag in responses:
+            response = random.choice(responses[response_tag])
+        else:
+            response = "Maaf, saya tidak mengerti."
+
         # Store messages
         st.session_state.messages.append({'user': user_input, 'bot': response})
         
