@@ -1,0 +1,368 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hallo",
+        "hai",
+        "halo",
+        "hei",
+        "hi",
+        "hy",
+        "pagi",
+        "morning",
+        "siang",
+        "afternoon",
+        "sore",
+        "malam",
+        "bro",
+        "sis",
+        "kawan"
+      ],
+      "responses": [
+        "Hai! Dentalcarebot di sini. Mau tau informasi tentang apa nih?",
+        "Halo! Saya Dentalcarebot, salam kenal ya! Mau tau tentang Dentalcare, kan?",
+        "Helo! Ini Dentalcarebot. Lagi kepo tentang Dentalcare ya?"
+      ]
+    },
+    {
+      "tag": "Dentalcarebot",
+      "patterns": [
+        "Siapa Dentalcarebot?"
+      ],
+      "responses": [
+        "Dentalcarebot adalah sebuah chatbot yang dirancang untuk memberikan informasi dan saran seputar perawatan gigi dan kesehatan mulut."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Dah",
+        "Dadah",
+        "Bye",
+        "Byee",
+        "Good bye",
+        "Selamat tinggal",
+        "Sampai jumpa",
+        "Bai",
+        "See you"
+      ],
+      "responses": [
+        "Bye!",
+        "Dadahh!",
+        "Good bye!",
+        "Dahh, semoga harimu menyenangkan yaa!",
+        "Sampai jumpa lagi!",
+        "See u! Senang bisa membantu"
+      ]
+    },
+    {
+      "tag": "terimakasih",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Terima kasih",
+        "Makasih",
+        "Terima kasih banyak"
+      ],
+      "responses": [
+        "Dengan senang hati :)",
+        "Sama-sama yaa"
+      ]
+    },
+    {
+      "tag": "penjelasan_Dentalcare",
+      "patterns": [
+        "Apa itu Dentalcare?"
+      ],
+      "responses": [
+        "DentalCareBot adalah sebuah chatbot yang dirancang untuk memberikan informasi dan saran seputar perawatan gigi dan kesehatan mulut. Chatbot ini dapat menjawab berbagai pertanyaan umum terkait perawatan gigi, prosedur dental, kebersihan mulut, gejala dan penanganan masalah gigi, serta membantu pengguna dalam melakukan pemesanan janji temu dengan dokter gigi."
+      ]
+    },
+    {
+      "tag": "tujuan_Dentalcare",
+      "patterns": [
+        "Apa tujuan Dentalcare?"
+      ],
+      "responses": [
+        "Untuk memberikan layanan dan informasi kesehatan gigi yang komprehensif, membantu individu dalam menjaga kesehatan mulut, mencegah masalah gigi, dan memfasilitasi akses terhadap perawatan gigi yang diperlukan."
+      ]
+    },
+    {
+      "tag": "program_Dentalcare",
+      "patterns": [
+        "Apa saja program Dentalcare?"
+      ],
+      "responses": [
+        "Program Dentalcare Edukasi dan penyuluhan",
+        "Program Dentalcare Layanan kesehatan gigi",
+        "Program Dentalcare teknologi dan aplikasi digital"
+      ]
+    },
+    {
+      "tag": "penjelasan_Edukasi dan penyuluhan",
+      "patterns": [
+        "Apa itu Edukasi dan penyuluhan?"
+      ],
+      "responses": [
+        "Edukasi dan penyuluhan DentalCare adalah upaya yang bertujuan untuk meningkatkan pengetahuan dan kesadaran masyarakat mengenai pentingnya menjaga kesehatan gigi dan mulut."
+      ]
+    },
+    {
+      "tag": "manfaat_Edukasi dan penyuluhan",
+      "patterns": [
+        "Apa saja manfaat Edukasi dan penyuluhan?"
+      ],
+      "responses": [
+        "Meningkatkan Kebiasaan Perawatan Mulut: Edukasi tentang teknik menyikat gigi yang benar, penggunaan benang gigi (flossing), dan mouthwash membantu mencegah masalah seperti karies (gigi berlubang) dan penyakit gusi."
+      ]
+    },
+    {
+      "tag": "penjelasan_Layanan kesehatan gigi",
+      "patterns": [
+        "Apa itu Layanan kesehatan gigi?"
+      ],
+      "responses": [
+        "Layanan kesehatan gigi DentalCare merujuk pada berbagai layanan yang ditujukan untuk menjaga, memperbaiki, dan meningkatkan kesehatan gigi dan mulut. Layanan ini biasanya disediakan oleh klinik gigi, rumah sakit, atau fasilitas kesehatan lainnya, dan dapat mencakup berbagai jenis perawatan serta prosedur yang dirancang untuk mencegah, mendiagnosis, dan mengobati masalah kesehatan gigi."
+      ]
+    },
+    {
+      "tag": "manfaat_Layanan kesehatan gigi",
+      "patterns": [
+        "Apa saja manfaat Layanan kesehatan gigi?"
+      ],
+      "responses": [
+        "Pencegahan masalah gigi dan mulut: Dengan melakukan pemeriksaan gigi secara rutin dan mendapatkan perawatan pencegahan, masalah seperti gigi berlubang, penyakit gusi, dan infeksi mulut dapat dideteksi dan diobati lebih awal, sebelum berkembang menjadi kondisi yang lebih serius dan memerlukan perawatan yang lebih invasif dan mahal. Ini tidak hanya menjaga kesehatan mulut yang optimal, tetapi juga mengurangi risiko komplikasi kesehatan lainnya yang terkait dengan masalah gigi."
+      ]
+    },
+    {
+      "tag": "penjelasan_Teknologi Dentalcare",
+      "patterns": [
+        "Apa itu Teknologi Dentalcare?"
+      ],
+      "responses": [
+        "DentalCareBot: Mengembangkan chatbot berbasis AI yang dapat memberikan informasi kesehatan gigi, menjawab pertanyaan umum, dan membantu pasien dalam memesan janji temu dengan dokter gigi."
+      ]
+    },
+    {
+      "tag": "manfaat_Teknologi Dentalcare",
+      "patterns": [
+        "Apa saja manfaat Teknologi Dentalcare?"
+      ],
+      "responses": [
+        "Dapat memberikan informasi dan menjawab pertanyaan seputar perawatan gigi kapan saja, tanpa batasan jam operasional. Ini memungkinkan pengguna untuk mendapatkan bantuan dan informasi yang mereka butuhkan di luar jam kerja klinik, meningkatkan kenyamanan dan aksesibilitas layanan kesehatan gigi."
+      ]
+    },
+    {
+      "tag": "Mau tahu Tentang penyakit gigi dan cara mencegahnya",
+      "patterns": [
+        "Mau tahu Tentang penyakit gigi dan cara mencegahnya"
+      ],
+      "responses": [
+        "Karies Gigi (Gigi Berlubang)",
+        "Penyakit Gusi (Periodontitis)",
+        "Abses Gigi",
+        "Sensitivitas Gigi",
+        "Penyakit Mulut Kering (Xerostomia)",
+        "Gigi Retak atau Patah",
+        "Plak dan Tartar",
+        "Frenitis",
+        "Lesi dan Ulkus Mulut"
+      ]
+    },
+    {
+      "tag": "penjelasan_Karies Gigi",
+      "patterns": [
+        "Apa itu Karies Gigi?"
+      ],
+      "responses": [
+        "Kerusakan pada lapisan gigi yang disebabkan oleh bakteri yang menghasilkan asam dari sisa makanan."
+      ]
+    },
+    {
+      "tag": "Mencegah_Karies Gigi",
+      "patterns": [
+        "Bagaimana cara mencegah Karies Gigi?"
+      ],
+      "responses": [
+        "Sikat gigi dua kali sehari dengan pasta gigi berfluoride."
+      ]
+    },
+    {
+      "tag": "penjelasan_Penyakit Gusi",
+      "patterns": [
+        "Apa itu Penyakit Gusi?"
+      ],
+      "responses": [
+        "Infeksi pada jaringan gusi dan tulang pendukung gigi yang dapat menyebabkan gusi meradang dan terpisah dari gigi."
+      ]
+    },
+    {
+      "tag": "Mencegah_Penyakit Gusi",
+      "patterns": [
+        "Bagaimana cara mencegah Penyakit Gusi?"
+      ],
+      "responses": [
+        "Gunakan benang gigi untuk menghilangkan plak di bawah garis gusi."
+      ]
+    },
+    {
+      "tag": "penjelasan_Gingvitis",
+      "patterns": [
+        "Apa itu Gingvitis?"
+      ],
+      "responses": [
+        "Bentuk awal dari penyakit gusi yang disebabkan oleh penumpukan plak di sepanjang garis gusi."
+      ]
+    },
+    {
+      "tag": "Mencegah_Gingvitis",
+      "patterns": [
+        "Bagaimana cara mencegah Gingvitis?"
+      ],
+      "responses": [
+        "Flossing secara teratur untuk menghilangkan plak dari sela-sela gigi."
+      ]
+    },
+    {
+      "tag": "penjelasan_Abses Gigi",
+      "patterns": [
+        "Apa itu Abses Gigi?"
+      ],
+      "responses": [
+        "Infeksi bakteri yang membentuk kantong nanah disekitar akar gigi."
+      ]
+    },
+    {
+      "tag": "Mencegah_Abses Gigi",
+      "patterns": [
+        "Bagaimana cara mencegah Abses Gigi?"
+      ],
+      "responses": [
+        "Menjaga kebersihan mulut dengan menyikat gigi dan flossing secara teratur."
+      ]
+    },
+    {
+      "tag": "penjelasan_Sensitivitas Gigi",
+      "patterns": [
+        "Apa itu Sensitivitas Gigi?"
+      ],
+      "responses": [
+        "Rasa sakit atau ketidaknyamanan pada gigi ketika terkena suhu ekstrem, makanan manis, atau minuman asam."
+      ]
+    },
+    {
+      "tag": "Mencegah_Sensitivitas Gigi",
+      "patterns": [
+        "Bagaimana cara mencegah Sensitivitas Gigi?"
+      ],
+      "responses": [
+        "Gunakan pasta gigi khusus untuk gigi sensitif."
+      ]
+    },
+    {
+      "tag": "penjelasan_Penyakit Mulut Kering (Xerostomia)",
+      "patterns": [
+        "Apa itu Penyakit Mulut Kering (Xerostomia)?"
+      ],
+      "responses": [
+        "Kekurangan produksi air liur yang dapat menyebabkan ketidaknyamanan dan risiko infeksi."
+      ]
+    },
+    {
+      "tag": "Mencegah_Penyakit Mulut Kering (Xerostomia)",
+      "patterns": [
+        "Bagaimana cara mencegah Penyakit Mulut Kering (Xerostomia)?"
+      ],
+      "responses": [
+        "Minum banyak air untuk menjaga kelembapan mulut."
+      ]
+    },
+    {
+      "tag": "penjelasan_Gigi Retak atau Patah",
+      "patterns": [
+        "Apa itu Gigi Retak atau Patah?"
+      ],
+      "responses": [
+        "Kerusakan fisik pada gigi yang dapat disebabkan oleh trauma atau tekanan berlebihan."
+      ]
+    },
+    {
+      "tag": "Mencegah_Gigi Retak atau Patah",
+      "patterns": [
+        "Bagaimana cara mencegah Gigi Retak atau Patah?"
+      ],
+      "responses": [
+        "Hindari mengunyah benda keras seperti es batu atau permen keras."
+      ]
+    },
+    {
+      "tag": "penjelasan_Plak dan Tartar",
+      "patterns": [
+        "Apa itu Plak dan Tartar?"
+      ],
+      "responses": [
+        "Penumpukan plak (lapisan bakteri) di gigi yang bisa mengeras menjadi tartar (kalkulus) jika tidak dibersihkan."
+      ]
+    },
+    {
+      "tag": "Mencegah_Plak dan Tartar",
+      "patterns": [
+        "Bagaimana cara mencegah Plak dan Tartar?"
+      ],
+      "responses": [
+        "Rutin melakukan pembersihan gigi profesional untuk menghilangkan tartar yang telah mengeras."
+      ]
+    },
+    {
+      "tag": "penjelasan_Frenitis",
+      "patterns": [
+        "Apa itu Frenitis?"
+      ],
+      "responses": [
+        "Radang pada frenulum (jaringan yang menghubungkan bibir dengan gusi)."
+      ]
+    },
+    {
+      "tag": "Mencegah_Frenitis",
+      "patterns": [
+        "Bagaimana cara mencegah Frenitis?"
+      ],
+      "responses": [
+        "Menghindari iritasi pada area frenulum dengan menghindari makanan atau minuman yang terlalu panas atau pedas."
+      ]
+    },
+    {
+      "tag": "penjelasan_Lesi dan Ulkus Mulut",
+      "patterns": [
+        "Apa itu Lesi dan Ulkus Mulut?"
+      ],
+      "responses": [
+        "Luka atau borok di mulut yang bisa disebabkan oleh berbagai faktor termasuk infeksi atau iritasi."
+      ]
+    },
+    {
+      "tag": "Mencegah_Lesi dan Ulkus Mulut",
+      "patterns": [
+        "Bagaimana cara mencegah Lesi dan Ulkus Mulut?"
+      ],
+      "responses": [
+        "Menghindari makanan atau minuman yang dapat menyebabkan iritasi."
+      ]
+    },
+    {
+      "tag": "Tips merawat Gigi dan Mulut",
+      "patterns": [
+        "Bagaimana cara merawat Gigi dan Mulut?"
+      ],
+      "responses": [
+        "Berikut adalah beberapa tips untuk merawat gigi dan mulut kamu:",
+        "1. Sikat Gigi Dua Kali Sehari\n2. Gunakan Benang Gigi (Flossing)\nApakah kamu ingin tips selanjutnya?",
+        "3. Kurangi Konsumsi Makanan dan Minuman Manis\n4. Rutin Berkumur dengan Mouthwash\nApakah kamu ingin tips selanjutnya?",
+        "5. Makan-Makanan yang Sehat\n6. Hindari Merokok dan Konsumsi Alkohol\nApakah kamu ingin tips selanjutnya?",
+        "7. Ganti Sikat Gigi Secara Berkala\n8. Lakukan Pemeriksaan Gigi Secara Rutin\nApakah kamu ingin tips selanjutnya?",
+        "9. Gunakan Pelindung Mulut Saat Berolahraga\n10. Jangan Gunakan Gigi Untuk Membuka Atau Memotong."
+      ]
+    }
+  ]
+}
