@@ -18,8 +18,8 @@ from nltk.stem import WordNetLemmatizer
 from nltk import download
 
 # Unduh data NLTK jika belum ada
-download ('punkt')
-download ('wordnet')
+download('punkt')
+download('wordnet')
 
 # Inisialisasi variabel
 lemmatizer = WordNetLemmatizer()
@@ -142,15 +142,17 @@ def preprocess_input(user_input):
 
     return prediction_input
 
-def chat():
-    # Muat tokenizer, label encoder, dan model
+@st.cache(allow_output_mutation=True)
+def load_model():
+    model = tf.keras.models.load_model('chatbot_model.keras')
     with open('tokenizer.pkl', 'rb') as handle:
         tokenizer = pickle.load(handle)
-
     with open('label_encoder.pkl', 'rb') as handle:
         le = pickle.load(handle)
+    return model, tokenizer, le
 
-    model = tf.keras.models.load_model('chatbot_model.keras')
+def chat():
+    model, tokenizer, le = load_model()
 
     # Display chat history
     if st.session_state.messages:
