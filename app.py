@@ -142,7 +142,7 @@ def preprocess_input(user_input):
 
     return prediction_input
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_model():
     model = tf.keras.models.load_model('chatbot_model.keras')
     with open('tokenizer.pkl', 'rb') as handle:
