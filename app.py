@@ -18,8 +18,8 @@ from nltk.stem import WordNetLemmatizer
 from nltk import download
 
 # Unduh data NLTK jika belum ada
-download('punkt')
-download('wordnet')
+download ('punkt')
+download ('wordnet')
 
 # Inisialisasi variabel
 lemmatizer = WordNetLemmatizer()
@@ -82,6 +82,7 @@ le = LabelEncoder()
 y_train = le.fit_transform(data['tags'])
 
 input_shape = x_train.shape[1]
+
 vocabulary = len(tokenizer.word_index)
 output_length = len(le.classes_)
 
@@ -123,13 +124,9 @@ plt.savefig('training_plot.png')
 plt.close()
 
 # Streamlit app
-st.markdown("<h1 style='text-align: center; color: blue;'>Dentalcarebot Chatbot</h1>", unsafe_allow_html=True)
-st.markdown("### Berbincang dengan **Dentalcarebot** dan dapatkan solusi cepat!", unsafe_allow_html=True)
+st.title("Chatbot")
 
-# Tambahkan gambar atau logo
-st.image("logo.png", width=150)  # Ganti dengan path gambar yang sesuai
-
-# Inisialisasi state session
+# Initialize session state
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 
@@ -145,13 +142,6 @@ def preprocess_input(user_input):
 
     return prediction_input
 
-# Fungsi menampilkan pesan
-def display_message(sender, message, is_user=True):
-    if is_user:
-        st.markdown(f"<div class='chat-box' style='text-align: right; background-color: #d4f0fc;'>{message}</div>", unsafe_allow_html=True)
-    else:
-        st.markdown(f"<div class='chat-box' style='text-align: left; background-color: #e8f5e9;'>{message}</div>", unsafe_allow_html=True)
-
 def chat():
     # Muat tokenizer, label encoder, dan model
     with open('tokenizer.pkl', 'rb') as handle:
@@ -165,8 +155,8 @@ def chat():
     # Display chat history
     if st.session_state.messages:
         for message in st.session_state.messages:
-            display_message('user', message['user'], is_user=True)
-            display_message('bot', message['bot'], is_user=False)
+            st.write(f"🤵 Kamu: {message['user']}")
+            st.write(f"🤖 Dentalcarebot: {message['bot']}")
     
     # Get user input
     user_input = st.text_input('Ketik pesan:', '')
@@ -174,40 +164,21 @@ def chat():
         # Process input
         prediction_input = preprocess_input(user_input)
 
-        with st.spinner('Dentalcarebot sedang berpikir...'):
-            output = model.predict(prediction_input)
-            output = output.argmax()
+        output = model.predict(prediction_input)
+        output = output.argmax()
 
-            response_tag = le.inverse_transform([output])[0]
-            response = random.choice(responses[response_tag])
+        response_tag = le.inverse_transform([output])[0]
+        response = random.choice(responses[response_tag])
         
         # Store messages
         st.session_state.messages.append({'user': user_input, 'bot': response})
         
         # Display messages
-        display_message('user', user_input, is_user=True)
-        display_message('bot', response, is_user=False)
+        st.write(f"🤵 Kamu: {user_input}")
+        st.write(f"🤖 Dentalcarebot: {response}")
 
         if response_tag == "goodbye":
             st.session_state.messages.append({'user': 'goodbye', 'bot': 'Goodbye!'})
             st.write("=" * 60 + "\n")
 
-# Menampilkan chat
 chat()
-
-# Feedback
-st.markdown("### Bagaimana pengalaman Anda?")
-feedback = st.slider("Rating", 1, 5)
-st.write(f"Anda memberikan rating {feedback} 🌟")
-
-# CSS untuk mempercantik chatbox
-st.markdown("""
-<style>
-.chat-box { 
-    padding: 10px; 
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-</style>
-""", unsafe_allow_html=True)
